@@ -10,6 +10,7 @@
     "@mui/material": "^6.4.3",
     "cra-template": "1.2.0",
     "framer-motion": "^12.4.1",
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-favicon": "^2.0.7",
@@ -17,6 +18,8 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,5 +42,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://abhishekdevlooper.github.io/portfolio-bw"
 }
