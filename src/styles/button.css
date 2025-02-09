@@ -1,0 +1,59 @@
+/* CUSTOM BUTTON */
+.custom-button {
+  background-color: #1976d2 !important; /* Primary Blue */
+  color: white !important;
+  padding: 12px 25px !important;
+  border-radius: 30px; /* Rounded corners */
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out; /* Smooth all transitions */
+  border: 2px solid transparent;
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect - Scale and Color */
+.custom-button:hover {
+  background-color: #1565c0 !important;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(25, 118, 210, 0.4);
+}
+
+/* Active Effect - Smaller and Darker */
+.custom-button:active {
+  background-color: #0d47a1 !important;
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
+}
+
+/* Button Ripple Effect */
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s linear;
+}
+
+/* Ripple Animation */
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .custom-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}

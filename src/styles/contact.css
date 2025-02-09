@@ -1,0 +1,96 @@
+/* CONTACT SECTION */
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #121212; /* Dark background */
+    color: white; /* White text */
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+  
+  /* TITLE STYLE */
+  .contact-section h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* INPUT STYLES */
+  .contact-input {
+    background-color: #333333; /* Dark background for inputs */
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 12px 15px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Input Hover Animation */
+  .contact-input:hover,
+  .contact-input:focus {
+    background-color: #444444;
+    box-shadow: 0px 4px 8px rgba(255, 123, 0, 0.2);
+  }
+  
+  /* BUTTON STYLE */
+  .contact-button {
+    background-color: #222222; /* Dark button background */
+    color: white;
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+  }
+  
+  /* BUTTON Hover and Active States */
+  .contact-button:hover {
+    background-color: #333333;
+    border-color: #ff7b00; /* Golden border color on hover */
+    box-shadow: 0px 8px 18px rgba(255, 123, 0, 0.3);
+  }
+  
+  .contact-button:active {
+    background-color: #444444;
+    transform: scale(0.98);
+  }
+  
+  /* RESPONSIVE STYLES */
+  @media (max-width: 600px) {
+    .contact-section {
+      padding: 30px 15px;
+    }
+  
+    .contact-input {
+      margin-bottom: 15px;
+    }
+  
+    .contact-button {
+      width: 100%;
+      padding: 14px;
+
+    }
+  }
+  
+  /* Fade-In Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

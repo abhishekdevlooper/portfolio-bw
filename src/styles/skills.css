@@ -1,0 +1,67 @@
+/* Skills Section Styles */
+.skills-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #111; /* Dark background for contrast */
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+
+}
+
+.skills-title {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 3rem;
+  color: white;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
+.skill-chip {
+  background-color: #fff; /* White background for the chips */
+  color: #000; /* Black text color */
+  margin: 10px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Avatar Icon Styles */
+.skill-avatar {
+  width: 30px;
+  height: 30px;
+}
+
+/* Hover Effect - Interactive and Animative */
+.skill-chip:hover {
+  background-color: #000; /* Dark background on hover */
+  color: #fff; /* White text color on hover */
+  transform: scale(1.1); /* Slight scale-up on hover */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3); /* Soft glowing effect */
+}
+
+/* Animation when skill chips are displayed */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2rem; /* Adjust font size on smaller screens */
+  }
+}

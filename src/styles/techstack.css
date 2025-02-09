@@ -1,0 +1,23 @@
+.tech-stack {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .tech-chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .tech-chip {
+    background-color: #ff4081 !important;
+    color: white !important;
+    margin: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .tech-chip:hover {
+    transform: scale(1.1);
+  }
+  

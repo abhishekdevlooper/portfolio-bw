@@ -1,0 +1,93 @@
+/* Experience Section */
+.experience-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #111, #222);
+    color: white;
+    margin-bottom: 40px;
+    border-radius: 10px;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFD700;
+  }
+  
+  /* Timeline */
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* Timeline Items */
+  .experience-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  /* Timeline Dots */
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    background: #FFD700;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Experience Content */
+  .experience-content {
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  /* Job Title */
+  .experience-content h3 {
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Job Duration */
+  .duration {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 10px;
+  }
+  
+  /* Job Description */
+  .experience-content p {
+    color: #ddd;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .experience-item {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .experience-content {
+      padding-left: 0;
+    }
+    
+    .timeline-dot {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
