@@ -3,7 +3,7 @@
   text-align: center;
   padding: 40px 20px;
   background-color: #111; /* Dark background for contrast */
-  color: white;
+  color: #FFD700;
   margin-bottom: 20px;
   margin-top: 20px;
   border-radius: 10px;
@@ -14,7 +14,7 @@
   margin-bottom: 30px;
   font-weight: bold;
   font-size: 3rem;
-  color: white;
+  color:#FFD700;
 }
 
 .skills-container {

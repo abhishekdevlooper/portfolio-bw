@@ -4,16 +4,17 @@ import "../styles/experience.css";
 
 const experiences = [
   {
-    title: "Software Developer - Tech Mahindra",
+    title: "Software Engineer (Development and Cloud)",
     duration: "2022 - Present",
-    description:
-      "Developed automation and full-stack solutions for British Telecom (BT). Built scalable applications using Java, React, and automation frameworks.",
-  },
-  {
-    title: "Intern - Tech Mahindra",
-    duration: "2021 - 2022",
-    description:
-      "Worked on automation testing and backend development. Gained hands-on experience with Selenium, Java, and Spring Boot.",
+    description: [
+      "Built 5+ microservices (Spring Boot, Hibernate), improving backend performance by 25%.",
+      "Developed 15+ REST APIs, reducing response time by 30%.",
+      "Implemented CI/CD pipelines (Jenkins, Docker, Kubernetes), cutting deployment time by 30%.",
+      "Optimized PostgreSQL queries, reducing execution time by 20%.",
+      "Developed React.js dashboards for 6000+ users, enhancing visualization.",
+      "Strengthened security using JWT and OAuth2, improving compliance.",
+      "Reduced UI rendering time by 15% through React performance optimizations.",
+    ],
   },
 ];
 
@@ -30,11 +31,14 @@ function Experience() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.3, duration: 0.5 }}
           >
-            <div className="timeline-dot"></div>
             <div className="experience-content">
               <h3>{exp.title}</h3>
               <h4 className="duration">{exp.duration}</h4>
-              <p>{exp.description}</p>
+              <ul>
+                {exp.description.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         ))}

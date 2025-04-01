@@ -23,7 +23,7 @@
 }
 
 .logo:hover {
-  color: #000000; /* Black color on hover */
+  color: #FFD700; /* Gold color on hover */
 }
 
 /* NAVIGATION LINKS - CENTERED */
@@ -50,7 +50,7 @@
   display: block;
   height: 2px;
   width: 0;
-  background: #000000; /* Black underline */
+  background: #FFD700; /* Gold underline */
   transition: width 0.3s ease-in-out;
   position: absolute;
   bottom: -5px;
@@ -58,9 +58,9 @@
   transform: translateX(-50%);
 }
 
-/* HOVER EFFECT */
+/* HOVER EFFECT - TEXT AND UNDERLINE TO GOLD */
 .nav-item:hover {
-  color: #000000; /* Black color on hover */
+  color: #FFD700; /* Gold color on hover for the text */
 }
 
 .nav-item:hover::after {
@@ -76,7 +76,7 @@
 
 /* MOBILE MENU */
 .mobile-menu {
-  width: 220px;
+  width: 250px;
   background: rgba(0, 0, 0, 1);
   height: 100%;
   padding: 20px 0;
@@ -92,7 +92,7 @@
 
 /* MOBILE NAV ITEM HOVER */
 .mobile-nav-item:hover {
-  color: #000000 !important; /* Black color on hover */
+  color: #FFD700 !important; /* Gold color on hover for mobile items */
 }
 
 /* RESPONSIVE DESIGN */
@@ -114,6 +114,6 @@
   }
 
   .mobile-menu .mobile-nav-item:hover {
-    color: #000000; /* Black color on hover */
+    color: #FFD700; /* Gold color on hover for mobile items */
   }
 }

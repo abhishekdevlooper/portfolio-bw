@@ -80,7 +80,19 @@ const Navbar = () => {
         </IconButton>
 
         {/* Mobile Drawer */}
-        <Drawer anchor="right" open={mobileOpen} onClose={toggleMobileMenu}>
+        <Drawer
+          anchor="right"
+          open={mobileOpen}
+          onClose={toggleMobileMenu}
+          sx={{
+            "& .MuiDrawer-paper": {
+              background: "rgba(0, 0, 0, 0.9)",
+              padding: "20px 0",
+              width: "250px",
+              transition: "width 0.3s ease-in-out",
+            },
+          }}
+        >
           <List className="mobile-menu">
             {navItems.map((item, index) => (
               <ListItem
