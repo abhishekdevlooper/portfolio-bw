@@ -1,6 +1,6 @@
 /* NAVBAR */
 .navbar {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(30, 30, 30, 0.9));
+  background: black !important; /* Ensuring Black Navbar */
   backdrop-filter: blur(10px);
   padding: 12px 30px;
   transition: background 0.3s ease-in-out;
@@ -17,26 +17,26 @@
 /* LOGO */
 .logo {
   font-weight: bold;
-  color: #ffffff;
+  color: white !important;
   font-size: 1.5rem;
   transition: color 0.3s ease-in-out;
 }
 
 .logo:hover {
-  color: #FFD700; /* Gold color on hover */
+  color: #FFD700 !important; /* Gold hover */
 }
 
-/* NAVIGATION LINKS - CENTERED */
+/* NAVIGATION LINKS */
 .nav-links {
   display: flex;
   gap: 25px;
-  margin: 0 auto; /* Center Align */
+  margin: 0 auto;
 }
 
 /* INDIVIDUAL NAV ITEMS */
 .nav-item {
   text-decoration: none;
-  color: #ffffff;
+  color: white !important;
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
@@ -58,41 +58,70 @@
   transform: translateX(-50%);
 }
 
-/* HOVER EFFECT - TEXT AND UNDERLINE TO GOLD */
+/* HOVER EFFECT */
 .nav-item:hover {
-  color: #FFD700; /* Gold color on hover for the text */
+  color: #FFD700 !important; /* Gold text hover */
 }
 
 .nav-item:hover::after {
   width: 100%;
 }
 
+/* REMOVE DEFAULT BLUE COLOR FROM MATERIAL UI */
+.nav-item,
+.nav-item:focus,
+.nav-item:active {
+  color: white !important;
+  outline: none !important;
+}
+
 /* MENU ICON (Hidden on Desktop) */
 .menu-icon {
   display: none !important;
-  color: white;
+  color: white !important;
   font-size: 1.5rem;
 }
 
 /* MOBILE MENU */
 .mobile-menu {
   width: 250px;
-  background: rgba(0, 0, 0, 1);
+  background: black !important;
   height: 100%;
   padding: 20px 0;
 }
 
+/* MOBILE NAV ITEM */
 .mobile-nav-item {
   font-size: 1.2rem !important;
   font-weight: 500 !important;
-  color: #ffffff !important;
+  color: white !important;
   text-align: center;
   padding: 15px 0;
 }
 
 /* MOBILE NAV ITEM HOVER */
 .mobile-nav-item:hover {
-  color: #FFD700 !important; /* Gold color on hover for mobile items */
+  color: #FFD700 !important; /* Gold hover */
+}
+
+/* REMOVE BLUE OUTLINES AND HIGHLIGHTS FROM MATERIAL UI */
+.MuiDrawer-paper {
+  background-color: black !important; /* Black drawer */
+}
+
+.MuiListItem-root {
+  color: white !important;
+}
+
+.MuiListItem-root:hover {
+  color: #FFD700 !important;
+}
+
+/* REMOVE BLUE FOCUS FROM BUTTONS */
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* RESPONSIVE DESIGN */
@@ -108,12 +137,11 @@
   /* Mobile Navigation Links */
   .mobile-menu .mobile-nav-item {
     text-decoration: none;
-    color: #ffffff;
     transition: color 0.3s ease-in-out;
     cursor: pointer;
   }
 
   .mobile-menu .mobile-nav-item:hover {
-    color: #FFD700; /* Gold color on hover for mobile items */
+    color: #FFD700 !important;
   }
 }

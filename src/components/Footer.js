@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/footer.css";
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -15,10 +15,12 @@ const Footer = () => {
 
       <div className="social-icons">
         {[
-          { icon: <FaLinkedin />, link: "https://linkedin.com" },
-          { icon: <FaGithub />, link: "https://github.com" },
-          { icon: <FaTwitter />, link: "https://twitter.com" },
-          { icon: <FaEnvelope />, link: "mailto:example@gmail.com" },
+          {
+            icon: <FaLinkedin />,
+            link: "https://www.linkedin.com/in/appuabhishek",
+          },
+          { icon: <FaGithub />, link: "https://github.com/abhishekdevlooper" },
+          { icon: <FaEnvelope />, link: "mailto:abhishekdevlooper@gmail.com" },
         ].map((social, index) => (
           <motion.a
             key={index}

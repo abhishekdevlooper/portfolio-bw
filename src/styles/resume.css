@@ -1,55 +1,63 @@
-/* RESUME SECTION */
+/* RESUME SECTION - MODERN GLASS CARD UI */
 .resume-section {
   text-align: center;
   padding: 60px 20px;
-  background-color: #121212; /* Dark background */
+  background: linear-gradient(135deg, #111, #1a1a1a); /* Dark gradient */
   color: #f5f5f5; /* Soft white text */
-  border-radius: 12px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(255, 215, 0, 0.2); /* Soft gold glow */
   margin-bottom: 40px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* HOVER EFFECT */
+/* HOVER EFFECT - DEPTH */
 .resume-section:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 40px rgba(255, 215, 0, 0.4); /* Increased gold glow */
 }
 
-/* TITLE STYLE */
+/* TITLE STYLE - GOLD GRADIENT TEXT */
 .resume-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #FFD700; /* Gold color */
   text-transform: uppercase;
   letter-spacing: 1px;
+  background: linear-gradient(90deg, #FFD700, #FFCC00, #FFD700);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
 }
 
-/* BUTTON STYLES */
+/* BUTTON STYLES - FUTURISTIC DESIGN */
 .resume-button {
   display: inline-block;
-  padding: 15px 35px;
-  background-color: #222222; /* Darker button color */
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #222, #333); /* Darker gradient */
   color: #fff;
   font-weight: 500;
   border-radius: 50px;
-  border: 2px solid transparent;
+  border: 2px solid #FFD700; /* Gold border */
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 15px rgba(255, 215, 0, 0.4); /* Subtle glow */
+  overflow: hidden;
+  position: relative;
 }
 
-/* BUTTON HOVER AND ACTIVE STATES */
+/* BUTTON HOVER EFFECT - NEON GLOW */
 .resume-button:hover {
-  background-color: #333333;
-  border-color: #FFD700; /* Gold border on hover */
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #333, #444);
+  border-color: #FFD700;
+  box-shadow: 0px 6px 25px rgba(255, 215, 0, 0.8); /* Neon glow */
+  transform: scale(1.05);
 }
 
+/* ACTIVE BUTTON - REALISTIC CLICK */
 .resume-button:active {
-  background-color: #444444;
+  background-color: #444;
   transform: scale(0.98);
 }
 
@@ -65,10 +73,15 @@
 /* RESPONSIVE DESIGN */
 @media (max-width: 600px) {
   .resume-section {
-      padding: 40px 15px;
+    padding: 40px 15px;
+  }
+
+  .resume-title {
+    font-size: 2rem;
   }
 
   .resume-button {
-      padding: 12px 30px;
+    padding: 12px 30px;
+    font-size: 1rem;
   }
 }

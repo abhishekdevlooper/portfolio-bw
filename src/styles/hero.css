@@ -91,3 +91,21 @@
     animation: slide-up 1s ease-in-out;
   }
   
+/* Glowing Text */
+.glow {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+/* Glitch Button Effect */
+@keyframes glitch {
+  0% { transform: skewX(0deg); }
+  20% { transform: skewX(10deg); }
+  40% { transform: skewX(-10deg); }
+  60% { transform: skewX(5deg); }
+  80% { transform: skewX(-5deg); }
+  100% { transform: skewX(0deg); }
+}
+
+.glitch:hover {
+  animation: glitch 0.3s infinite;
+}

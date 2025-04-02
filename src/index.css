@@ -1,13 +1,43 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Ensure Navbar Background Stays Black */
+.navbar {
+  background: #000000 !important; /* Fully Black */
+  backdrop-filter: blur(10px);
+  padding: 12px 30px;
+  transition: background 0.3s ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Override Any Blue Focus Effects */
+* {
+  color: #ffffff !important; /* Force all text to be white */
+  background-color: transparent !important;
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Fix Material UI Buttons and Links */
+.MuiButton-root,
+.MuiListItem-root,
+.MuiTypography-root {
+  color: #ffffff !important; /* Force white text */
+}
+
+.MuiButton-root:hover,
+.MuiListItem-root:hover,
+.MuiTypography-root:hover {
+  color: #FFD700 !important; /* Gold on hover */
+}
+
+/* Override Material UI's Blue Focus Glow */
+.Mui-focused,
+.Mui-selected,
+.MuiButton-root:focus,
+.MuiListItem-root:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Fix Menu Icon Color */
+.menu-icon {
+  color: white !important;
 }

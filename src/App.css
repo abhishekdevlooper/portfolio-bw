@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+/* Ensure Navbar Background Stays Black */
+.navbar {
+  background: #000000 !important; /* Fully Black */
+  backdrop-filter: blur(10px);
+  padding: 12px 30px;
+  transition: background 0.3s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Override Any Blue Focus Effects */
+* {
+  color: #ffffff !important; /* Force all text to be white */
+  background-color: transparent !important;
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Fix Material UI Buttons and Links */
+.MuiButton-root,
+.MuiListItem-root,
+.MuiTypography-root {
+  color: #ffffff !important; /* Force white text */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.MuiButton-root:hover,
+.MuiListItem-root:hover,
+.MuiTypography-root:hover {
+  color: #FFD700 !important; /* Gold on hover */
 }
 
-.App-link {
-  color: #61dafb;
+/* Override Material UI's Blue Focus Glow */
+.Mui-focused,
+.Mui-selected,
+.MuiButton-root:focus,
+.MuiListItem-root:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Fix Menu Icon Color */
+.menu-icon {
+  color: white !important;
 }

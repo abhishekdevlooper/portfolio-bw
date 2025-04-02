@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import { motion } from "framer-motion";
 import "../styles/resume.css";
 
@@ -7,15 +7,22 @@ const Resume = () => {
   return (
     <motion.div
       className="resume-section"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      whileHover={{ y: -3 }} // Floating effect
     >
-      <Typography variant="h3" className="resume-title">
+      <motion.h2
+        className="resume-title"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
         Download My Resume
-      </Typography>
+      </motion.h2>
+
       <motion.div
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         transition={{ duration: 0.3 }}
       >
