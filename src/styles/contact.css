@@ -1,7 +1,7 @@
 .contact-section {
   text-align: center;
   background: linear-gradient(135deg, rgb(0, 0, 0), rgb(0, 0, 0));
-  padding: 60px 20px;
+  padding: 60px 45px;
   backdrop-filter: blur(10px);
   /* background: linear-gradient(145deg, #121212cc, #1a1a1acc); */
   color: #FFD700;
@@ -32,6 +32,7 @@
   margin-bottom: 20px;
   border-radius: 8px;
   padding: 12px 15px;
+  /* padding: 200px; */
   transition: all 0.3s ease-in-out;
 }
 
