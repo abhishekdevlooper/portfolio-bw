@@ -7,11 +7,17 @@ const Footer = () => {
   return (
     <motion.footer
       className="footer-container"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <p>© {new Date().getFullYear()} My Portfolio. All Rights Reserved.</p>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      >
+        © {new Date().getFullYear()} My Portfolio. All Rights Reserved.
+      </motion.p>
 
       <div className="social-icons">
         {[
@@ -28,7 +34,14 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon"
-            whileHover={{ scale: 1.2, color: "#FFD700" }}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 + index * 0.2 }}
+            whileHover={{
+              scale: 1.3,
+              color: "#FFD700",
+              textShadow: "0 0 10px #FFD700, 0 0 20px #FFD700",
+            }}
             whileTap={{ scale: 0.95 }}
           >
             {social.icon}

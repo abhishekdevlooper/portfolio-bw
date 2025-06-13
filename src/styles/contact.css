@@ -1,54 +1,49 @@
-/* CONTACT SECTION */
 .contact-section {
   text-align: center;
+  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(0, 0, 0));
   padding: 60px 20px;
-  background-color: #121212; /* Dark background */
-  color: white; /* White text */
+  backdrop-filter: blur(10px);
+  /* background: linear-gradient(145deg, #121212cc, #1a1a1acc); */
+  color: #FFD700;
   border-radius: 12px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 30px 0px #000;
   margin-bottom: 40px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* HOVER EFFECT */
 .contact-section:hover {
   transform: scale(1.02);
-  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 40px 0px #000;
 }
 
-/* TITLE STYLE */
 .contact-section h3 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #FFD700; /* Gold color for the title */
+  color: #FFD700;
   text-transform: uppercase;
   letter-spacing: 1px;
   animation: fadeIn 1s ease-in-out;
 }
 
-/* INPUT STYLES */
 .contact-input {
-  background-color: #333333; /* Dark background for inputs */
-  color: white;
+  background: #333;
+  color: #fff;
   margin-bottom: 20px;
   border-radius: 8px;
   padding: 12px 15px;
-  width: 100%;
   transition: all 0.3s ease-in-out;
 }
 
-/* Input Hover Animation */
 .contact-input:hover,
-.contact-input:focus {
-  background-color: #444444;
-  box-shadow: 0px 4px 8px rgba(255, 123, 0, 0.2); /* Golden shadow on focus */
+.contact-input:focus-within {
+  background: #444;
+  box-shadow: 0px 4px 8px 0px #ff7b00cc;
 }
 
-/* BUTTON STYLE */
 .contact-button {
-  background-color: #222222; /* Dark button background */
-  color: white;
+  background: #222;
+  color: #FFD700;
   margin-top: 20px;
   padding: 12px 30px;
   font-weight: 600;
@@ -56,45 +51,40 @@
   border: 2px solid transparent;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 15px 0px #000;
 }
 
-/* BUTTON Hover and Active States */
 .contact-button:hover {
-  background-color: #333333;
-  border-color: #FFD700; /* Gold border on hover */
-  box-shadow: 0px 8px 18px rgba(255, 123, 0, 0.3); /* Golden shadow on hover */
+  background: #333;
+  border: 2px solid #FFD700;
+  box-shadow: 0px 8px 18px 0px #ff7b004d;
 }
 
 .contact-button:active {
-  background-color: #444444;
+  background: #444;
   transform: scale(0.98);
 }
 
-/* RESPONSIVE STYLES */
 @media (max-width: 600px) {
   .contact-section {
-      padding: 40px 15px;
+    padding: 40px 15px;
   }
-
   .contact-input {
-      margin-bottom: 15px;
+    margin-bottom: 15px;
   }
-
   .contact-button {
-      width: 100%;
-      padding: 14px;
+    width: 100%;
+    padding: 14px;
   }
 }
 
-/* Fade-In Animation */
 @keyframes fadeIn {
   0% {
-      opacity: 0;
-      transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
