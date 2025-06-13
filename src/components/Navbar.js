@@ -30,12 +30,9 @@ const Navbar = () => {
   const scrollToSection = (className) => {
     const section = document.querySelector(`.${className}`);
     if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 70, // Adjust for fixed navbar height
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: section.offsetTop - 70, behavior: "smooth" });
     }
-    setMobileOpen(false); // Close menu after clicking a link
+    setMobileOpen(false);
   };
 
   // Update scroll progress
@@ -45,7 +42,6 @@ const Navbar = () => {
       const height = document.documentElement.scrollHeight - window.innerHeight;
       setScrollProgress((scrollY / height) * 100);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -69,13 +65,16 @@ const Navbar = () => {
             🚀 My Portfolio
           </Typography>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation with smooth slide-up */}
           <div className="nav-links">
             {navItems.map((item, index) => (
               <motion.a
                 key={index}
                 onClick={() => scrollToSection(item.class)}
                 className="nav-item"
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -89,14 +88,14 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton>
 
-          {/* Mobile Drawer */}
+          {/* Mobile Drawer with smooth slide-up */}
           <Drawer anchor="right" open={mobileOpen} onClose={toggleMobileMenu}>
             <List className="mobile-menu">
               {navItems.map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <ListItem button onClick={() => scrollToSection(item.class)}>

@@ -28,7 +28,7 @@ const Resume = () => {
       >
         <Button variant="contained" className="resume-button">
           <a
-            href="https://drive.google.com/file/d/1xIalZMOobklF9QkjecucDcJwqX_0zboz/view?usp=sharing"
+            href="https://drive.google.com/file/d/1bDRtjwXs88OTPvuaYh1fXCKHoWzUTPBw/view?usp=drive_link"
             download="Resume.pdf"
           >
             Download
