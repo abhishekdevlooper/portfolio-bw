@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-bw/static/css/main.06cae384.css",
+    "main.css": "/portfolio-bw/static/css/main.1f168d1d.css",
     "main.js": "/portfolio-bw/static/js/main.151da4f2.js",
     "static/media/DevOp.jpg": "/portfolio-bw/static/media/DevOp.6043c1b70a1f516bbdd1.jpg",
     "static/media/ECommercePlatform.jpg": "/portfolio-bw/static/media/ECommercePlatform.30020bccb74e92e55c6a.jpg",
@@ -8,11 +8,11 @@
     "static/media/parallax.jpg": "/portfolio-bw/static/media/parallax.a929a8fd5d76e9d57a18.jpg",
     "static/media/Laptop.jpg": "/portfolio-bw/static/media/Laptop.155294296d6ffa44dd01.jpg",
     "index.html": "/portfolio-bw/index.html",
-    "main.06cae384.css.map": "/portfolio-bw/static/css/main.06cae384.css.map",
+    "main.1f168d1d.css.map": "/portfolio-bw/static/css/main.1f168d1d.css.map",
     "main.151da4f2.js.map": "/portfolio-bw/static/js/main.151da4f2.js.map"
   },
   "entrypoints": [
-    "static/css/main.06cae384.css",
+    "static/css/main.1f168d1d.css",
     "static/js/main.151da4f2.js"
   ]
 }
