@@ -1,7 +1,7 @@
 .contact-section {
   text-align: center;
   background: linear-gradient(135deg, rgb(0, 0, 0), rgb(0, 0, 0));
-  padding: 60px 45px;
+  padding: 60px 100px;
   backdrop-filter: blur(10px);
   /* background: linear-gradient(145deg, #121212cc, #1a1a1acc); */
   color: #FFD700;
