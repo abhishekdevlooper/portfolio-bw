@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/about.css";
-import laptopImage from "./Laptop.jpg"; // Import image
+import laptopImage from "./Laptop.jpg";
 
 function About() {
   return (
@@ -47,7 +47,7 @@ function About() {
             applications that enhance user experiences.
           </motion.p>
 
-          {/* Interactive Timeline */}
+          {/* Timeline Section */}
           <div className="timeline">
             <div className="timeline-item">
               <span className="dot"></span>
@@ -56,8 +56,7 @@ function About() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
-                💻 <strong>1.5+ Years Experience</strong> in Java &
-                Microservices.
+                💻 <strong>2+ Years Experience</strong> in Java & Microservices.
               </motion.p>
             </div>
 
@@ -83,6 +82,45 @@ function About() {
               </motion.p>
             </div>
           </div>
+
+          {/* Tech Stack Section */}
+          <motion.div
+            className="tech-stack"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.3 }}
+          >
+            <h3>Tech Stack</h3>
+            <ul className="tech-list">
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>Microservices</li>
+              <li>Hibernate</li>
+              <li>Rest API</li>
+              <li>Kafka</li>
+              <li>React.js</li>
+              <li>Redux</li>
+              <li>AWS</li>
+              <li>Kubernetes</li>
+              <li>Docker</li>
+              <li>Jenkins</li>
+              <li>Selenium</li>
+            </ul>
+          </motion.div>
+
+          {/* Download Resume Button */}
+          <motion.a
+            href="https://drive.google.com/file/d/1bDRtjwXs88OTPvuaYh1fXCKHoWzUTPBw/view?usp=drive_link"
+            download
+            className="download-cv"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.5 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            📁 Download Resume
+          </motion.a>
         </div>
       </motion.div>
     </section>

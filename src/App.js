@@ -5,13 +5,12 @@ import Footer from "./components/Footer";
 import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
-import Skills from "./sections/Skills";
-import Resume from "./sections/Resume";
+// import Skills from "./sections/Skills";
+// import Resume from "./sections/Resume";
 import Contact from "./sections/Contact";
 import Hero from "./sections/Hero";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./styles/globals.css";
-import BackToTop from "./components/BackToTop";
 
 function App() {
   const [dark, setDark] = useState(true);
@@ -47,13 +46,13 @@ function App() {
         >
           {dark ? "Switch to Light" : "Switch to Dark"}
         </Button>
-        <BackToTop />
+        {/* <BackToTop /> */}
         <Hero />
         <About />
         <Experience />
         <Projects />
-        <Skills />
-        <Resume />
+        {/* <Skills /> */}
+        {/* <Resume /> */}
         <Contact />
       </Container>
       <Footer />

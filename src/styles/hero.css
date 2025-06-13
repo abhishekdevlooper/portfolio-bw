@@ -1,7 +1,7 @@
-/* HERO SECTION */
 .hero {
-  min-height: 100vh;  /* Allows it to grow if content expands */
+  min-height: 100vh;
   width: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,113 +9,123 @@
   background: linear-gradient(135deg, #111111, #222222);
   color: #ffffff;
   padding: 2rem;
-  position: relative;
   overflow: hidden;
   margin-bottom: 40px;
   border-radius: 10px;
   box-sizing: border-box;
 }
 
-/* Responsive tweaks */
+.hero canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
 @media (max-width: 768px) {
   .hero {
-      padding: 1.5rem;
-      margin-bottom: 30px;
+    padding: 1.5rem;
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-      padding: 1rem;
-      margin-bottom: 20px;
-      border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
   }
 }
 
-  
-  /* HERO CONTENT */
-  .hero-content {
-    max-width: 700px;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1.5s ease-in-out;
+.hero-content {
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px 10px #FFD70033;
+  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content:hover {
+  box-shadow: 0 0 40px 15px #FFD70044;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero h1:hover {
+  transform: scale(1.05);
+  color: #FFD700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #FFD700;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border-radius: 50px;
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(255, 123, 0, 0.3);
+}
+
+.cta-button:hover {
+  background-color: #ffcc00;
+  box-shadow: 0px 6px 15px rgba(255, 85, 0, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  /* HEADINGS */
-  .hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  /* HIGHLIGHT COLOR */
-  .highlight {
-    color:#FFD700;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* CTA BUTTON */
-  .cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 1.2rem;
-    padding: 12px 25px;
-    border-radius: 50px;
-    background-color: #FFD700;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0px 4px 10px rgba(255, 123, 0, 0.3);
-  }
-  
-  .cta-button:hover {
-    background-color: #FFD700;
-    box-shadow: 0px 6px 15px rgba(255, 85, 0, 0.4);
-  }
-  
-  /* ANIMATIONS */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes slide-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .slide-up {
-    animation: slide-up 1s ease-in-out;
-  }
-  
-/* Glowing Text */
+}
+
+.slide-up {
+  animation: slide-up 1s ease-in-out;
+}
+
 .glow {
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
-/* Glitch Button Effect */
 @keyframes glitch {
   0% { transform: skewX(0deg); }
   20% { transform: skewX(10deg); }
@@ -127,4 +137,19 @@
 
 .glitch:hover {
   animation: glitch 0.3s infinite;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  color: #FFD700;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
 }

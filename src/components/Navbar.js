@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {
   AppBar,
   Toolbar,
@@ -9,19 +9,34 @@ import {
   ListItem,
   ListItemText,
   LinearProgress,
+  Tooltip,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import WorkIcon from "@mui/icons-material/Work";
 import CodeIcon from "@mui/icons-material/Code";
-import SchoolIcon from "@mui/icons-material/School";
+// import SchoolIcon from "@mui/icons-material/School";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { motion } from "framer-motion";
 import "../styles/navbar.css";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [active, setActive] = useState("hero");
+
+  // Memoized Navigation items with icons
+  const navItems = useMemo(
+    () => [
+      { name: "Home", class: "hero", icon: <HomeIcon /> },
+      { name: "Experience", class: "experience-container", icon: <WorkIcon /> },
+      { name: "Projects", class: "projects-container", icon: <CodeIcon /> },
+      // { name: "Skills", class: "skills-section", icon: <SchoolIcon /> },
+      { name: "Contact", class: "contact-section", icon: <ContactMailIcon /> },
+    ],
+    []
+  );
 
   const toggleMobileMenu = () => {
     setMobileOpen(!mobileOpen);
@@ -35,25 +50,32 @@ const Navbar = () => {
     setMobileOpen(false);
   };
 
-  // Update scroll progress
+  // Update scroll progress and active section
   useEffect(() => {
     const handleScroll = () => {
+      // Update scroll progress
       const scrollY = window.scrollY;
       const height = document.documentElement.scrollHeight - window.innerHeight;
       setScrollProgress((scrollY / height) * 100);
+
+      // Update active section
+      navItems.forEach((item) => {
+        const section = document.querySelector(`.${item.class}`);
+        if (section) {
+          const top = section.offsetTop - 100;
+          const bottom = top + section.offsetHeight;
+
+          if (window.scrollY >= top && window.scrollY < bottom) {
+            setActive(item.class);
+          }
+        }
+      });
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    handleScroll();
 
-  // Navigation items with icons
-  const navItems = [
-    { name: "Home", class: "hero", icon: <HomeIcon /> },
-    { name: "Experience", class: "experience-container", icon: <WorkIcon /> },
-    { name: "Projects", class: "projects-container", icon: <CodeIcon /> },
-    { name: "Skills", class: "skills-section", icon: <SchoolIcon /> },
-    { name: "Contact", class: "contact-section", icon: <ContactMailIcon /> },
-  ];
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [navItems]);
 
   return (
     <>
@@ -68,18 +90,21 @@ const Navbar = () => {
           {/* Desktop Navigation with smooth slide-up */}
           <div className="nav-links">
             {navItems.map((item, index) => (
-              <motion.a
-                key={index}
-                onClick={() => scrollToSection(item.class)}
-                className="nav-item"
-                initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {item.icon} {item.name}
-              </motion.a>
+              <Tooltip key={index} title={item.name}>
+                <motion.a
+                  onClick={() => scrollToSection(item.class)}
+                  className={`nav-item ${
+                    active === item.class ? "active" : ""
+                  }`}
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {item.icon} {item.name}
+                </motion.a>
+              </Tooltip>
             ))}
           </div>
 
@@ -114,6 +139,18 @@ const Navbar = () => {
           className="scroll-progress"
         />
       </AppBar>
+
+      {/* Back To Top Button */}
+      {scrollProgress > 20 && (
+        <motion.button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="back-to-top"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+        >
+          <ArrowUpwardIcon />
+        </motion.button>
+      )}
     </>
   );
 };
